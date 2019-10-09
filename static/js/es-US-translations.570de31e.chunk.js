@@ -1,2 +1,0 @@
-(this["webpackJsonpresponsive-element-use-effect-bug"]=this["webpackJsonpresponsive-element-use-effect-bug"]||[]).push([[9],{82:function(e,a,s){"use strict";Object.defineProperty(a,"__esModule",{value:!0}),a.messages=a.locale=a.areTranslationsLoaded=void 0;var o,r=s(15),t=s(94),l=(o=t)&&o.__esModule?o:{default:o};(0,r.addLocaleData)(l.default);a.areTranslationsLoaded=!0,a.locale="es-US",a.messages={"Terra.ajax.error":"Error al cargar el contenido."}}}]);
-//# sourceMappingURL=es-US-translations.570de31e.chunk.js.map

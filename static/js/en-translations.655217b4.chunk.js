@@ -1,2 +1,0 @@
-(this["webpackJsonpresponsive-element-use-effect-bug"]=this["webpackJsonpresponsive-element-use-effect-bug"]||[]).push([[7],{76:function(e,a,s){"use strict";Object.defineProperty(a,"__esModule",{value:!0}),a.messages=a.locale=a.areTranslationsLoaded=void 0;var o,t=s(15),l=s(93),n=(o=l)&&o.__esModule?o:{default:o};(0,t.addLocaleData)(n.default);a.areTranslationsLoaded=!0,a.locale="en",a.messages={"Terra.ajax.error":"This content failed to load."}}}]);
-//# sourceMappingURL=en-translations.655217b4.chunk.js.map
