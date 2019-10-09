@@ -2,14 +2,25 @@
   "name": "responsive-element-use-effect-bug",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https: //dev-cprice.github.io/responsive-element-use-effect-bug/",
   "dependencies": {
+    "node-sass": "^4.12.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
-    "react-scripts": "3.2.0"
+    "react-intl": "^2.9.0",
+    "react-scripts": "3.2.0",
+    "terra-base": "^5.21.0",
+    "terra-responsive-element": "^5.10.0"
   },
   "scripts": {
+    "clean": "rm -rf build aggregate-translations lib",
+    "aggregate-translations": "tt-aggregate-translations -b ./ -d ./src/**/translations -d ./translations -o ./node_modules/terra-i18n/node_modules -f es6",
+    "prestart": "yarn run clean && yarn run aggregate-translations",
     "start": "react-scripts start",
+    "prebuild": "yarn run clean && yarn run aggregate-translations",
     "build": "react-scripts build",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -27,5 +38,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.1.1",
+    "terra-aggregate-translations": "^1.3.0"
   }
 }
