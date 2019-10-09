@@ -2,7 +2,7 @@
   "name": "responsive-element-use-effect-bug",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https: //dev-cprice.github.io/responsive-element-use-effect-bug/",
+  "homepage": "https://dev-cprice.github.io/responsive-element-use-effect-bug/",
   "dependencies": {
     "node-sass": "^4.12.0",
     "react": "^16.10.2",
@@ -10,6 +10,7 @@
     "react-intl": "^2.9.0",
     "react-scripts": "3.2.0",
     "terra-base": "^5.21.0",
+    "terra-button": "^3.25.0",
     "terra-responsive-element": "^5.10.0"
   },
   "scripts": {

@@ -6104,6 +6104,11 @@ jsx-ast-utils@^2.1.0, jsx-ast-utils@^2.2.1:
     array-includes "^3.0.3"
     object.assign "^4.1.0"
 
+keycode-js@^2.0.1:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/keycode-js/-/keycode-js-2.0.3.tgz#0ef559be057847aae6c520ce03577f4a12f7e257"
+  integrity sha512-nGuOQ0zvYQFr0OOBOZS47e/ifsiuNz1pleQIFS+LX+udj3St6AvHpv55MI8DCre6Yg9D2CG/qqWbuAx7iQt9FQ==
+
 killable@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/killable/-/killable-1.0.1.tgz#4c8ce441187a061c7474fb87ca08e2a638194892"
@@ -9957,6 +9962,17 @@ terra-breakpoints@^2.19.0:
     prop-types "^15.5.8"
     terra-doc-template "^2.20.0"
 
+terra-button@^3.25.0:
+  version "3.25.0"
+  resolved "https://registry.yarnpkg.com/terra-button/-/terra-button-3.25.0.tgz#22c68224649b74c0e04a32d4b98622daff30680b"
+  integrity sha512-i/Ji1MX7hlvSbpymJtvTHrq32Lx3VUBEKLivwXB0TZb/uvpdV9SGItKbHpvyT6RDSnbWod9VPxysS7IqeBZVqQ==
+  dependencies:
+    classnames "^2.2.5"
+    keycode-js "^2.0.1"
+    prop-types "^15.5.8"
+    terra-doc-template "^2.20.0"
+    terra-icon "^3.22.0"
+
 terra-doc-template@^2.20.0:
   version "2.20.0"
   resolved "https://registry.yarnpkg.com/terra-doc-template/-/terra-doc-template-2.20.0.tgz#071969a6f6beb6c23cab64ceff0d5c5303982296"
@@ -9975,6 +9991,15 @@ terra-i18n@^4.17.0:
   dependencies:
     classnames "^2.2.5"
     intl "^1.2.5"
+    prop-types "^15.5.8"
+    terra-doc-template "^2.20.0"
+
+terra-icon@^3.22.0:
+  version "3.22.0"
+  resolved "https://registry.yarnpkg.com/terra-icon/-/terra-icon-3.22.0.tgz#6413286b06b8beb4252f41f68752d3c15f501354"
+  integrity sha512-la+NWUWxQFPrQW/E6z8n1YYiLgxurKBpHe8I8kHV74lLWxwlac/EIlKqJsvVTbPUZ8LRDrziN8bVz3hwSlF+xQ==
+  dependencies:
+    classnames "^2.2.5"
     prop-types "^15.5.8"
     terra-doc-template "^2.20.0"
 
