@@ -2,10 +2,9 @@ import React from "react";
 import ResponsiveElement from "terra-responsive-element";
 import Button from "terra-button";
 
-export default function Controlled() {
+function Large() {
   const titleRef = React.useRef(null);
   const [titleFocusedProperly, setTitleFocusedProperly] = React.useState(false);
-  const [activeBreakpoint, setActiveBreakpoint] = React.useState("");
 
   React.useEffect(() => {
     const { current: title } = titleRef;
@@ -14,13 +13,14 @@ export default function Controlled() {
       title.focus();
       setTitleFocusedProperly(true);
     } else {
-      console.warn("Controlled: Couldn't focus on the title...");
+      console.warn("Controlled: Couldn't focus on the large title...");
       setTitleFocusedProperly(false);
     }
   }, []);
 
-  const large = (
+  return (
     <div>
+      <p>Title focused properly? {titleFocusedProperly.toString()}</p>
       <span tabIndex="0" ref={titleRef}>
         Large Title Here
       </span>
@@ -28,9 +28,27 @@ export default function Controlled() {
       <Button text="Focusable Button" />
     </div>
   );
+}
 
-  const tiny = (
+function Tiny() {
+  const titleRef = React.useRef(null);
+  const [titleFocusedProperly, setTitleFocusedProperly] = React.useState(false);
+
+  React.useEffect(() => {
+    const { current: title } = titleRef;
+
+    if (title) {
+      title.focus();
+      setTitleFocusedProperly(true);
+    } else {
+      console.warn("Controlled: Couldn't focus on the tiny title...");
+      setTitleFocusedProperly(false);
+    }
+  }, []);
+
+  return (
     <div>
+      <p>Title focused properly? {titleFocusedProperly.toString()}</p>
       <span tabIndex="0" ref={titleRef}>
         Tiny Title Here
       </span>
@@ -38,24 +56,27 @@ export default function Controlled() {
       <Button text="Focusable Button" />
     </div>
   );
+}
+
+export default function Controlled() {
+  const [activeBreakpoint, setActiveBreakpoint] = React.useState("");
 
   const content = React.useMemo(() => {
     switch (activeBreakpoint) {
       case "large":
       case "huge":
       case "enormous":
-        return large;
+        return <Large />;
       default:
-        return tiny;
+        return <Tiny />;
     }
-  }, [activeBreakpoint, large, tiny]);
+  }, [activeBreakpoint]);
 
   const onChange = React.useCallback(value => setActiveBreakpoint(value), []);
 
   return (
     <div>
       <h1>Controlled</h1>
-      <p>Title focused properly? {titleFocusedProperly.toString()}</p>
       <ResponsiveElement responsiveTo="window" onChange={onChange}>
         {content}
       </ResponsiveElement>
